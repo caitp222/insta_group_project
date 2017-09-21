@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   post '/sessions' => 'sessions#create'
   delete '/sessions' => 'sessions#delete'
 
+  #photo
+  get '/photos/:id' => 'photos#show'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'static#index'
 end
