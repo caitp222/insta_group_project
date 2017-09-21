@@ -14,8 +14,8 @@ class Timeline extends React.Component {
     ]
     return(
       <div>
-        {photos.map((photo) =>
-          <Photo photo={photo} />
+        {photos.map((photo, i) =>
+          <Photo photo={photo} key={i} />
         )}
       </div>
     )

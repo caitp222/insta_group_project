@@ -1,12 +1,12 @@
 class ProfileInfo extends React.Component {
   render(){
 
-    const { photoUrl, bio } = this.props
+    const { photoUrl, bio } = this.props.profileInfo
 
     return(
       <div className="profile-info">
-        <span class="profile">
-          <img class="avatar" src={photoUrl} alt=""/>
+        <span className="profile">
+          <img className="avatar" src={photoUrl} alt=""/>
             <div>
                 {bio}
               </div>
