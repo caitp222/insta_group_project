@@ -6,10 +6,10 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.new(photo_params)
-    if @photo.save
-      redirect_to '/'
-      # render :json @photo.photo.url
+    photo = Photo.new(photo_params)
+    if photo.save
+      # redirect_to '/'
+      render json: photo.photo.url
     else
       @errors = @photo.errors.full_messages
       puts @errors
