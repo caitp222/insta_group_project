@@ -22,3 +22,12 @@ img {
 div.photo-container {
   display: inline-block;
 }
+
+div.profile-info {
+  max-height: 150px;
+  display: inline-block;
+}
+
+form {
+  display: inline-block;
+}

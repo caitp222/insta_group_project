@@ -4,7 +4,7 @@ class ProfileInfo extends React.Component {
     const { photoUrl, bio } = this.props
 
     return(
-      <div>
+      <div className="profile-info">
         <span class="profile">
           <img class="avatar" src={photoUrl} alt=""/>
             <div>
