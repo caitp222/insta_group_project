@@ -18,19 +18,19 @@ User.create(username: "username", email: "email@email.com", password: "password"
 end
 
 10.times do
-  Photo.create(photo_url: "https://static.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg", user_id: User.all.sample.id, blurb: Faker::ChuckNorris.fact)
+  Photo.create(photo: "https://static.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg", user_id: User.all.sample.id, blurb: Faker::ChuckNorris.fact)
 end
 
 10.times do
-  Photo.create(photo_url:  "https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg", user_id: User.all.sample.id, blurb: Faker::ChuckNorris.fact)
+  Photo.create(photo:  "https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg", user_id: User.all.sample.id, blurb: Faker::ChuckNorris.fact)
 end
 
 10.times do
-  Photo.create(photo_url:  "https://static.pexels.com/photos/96938/pexels-photo-96938.jpeg", user_id: User.all.sample.id, blurb: Faker::ChuckNorris.fact)
+  Photo.create(photo:  "https://static.pexels.com/photos/96938/pexels-photo-96938.jpeg", user_id: User.all.sample.id, blurb: Faker::ChuckNorris.fact)
 end
 
 10.times do
-  Photo.create(photo_url:  "https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg", user_id: User.all.sample.id, blurb: Faker::ChuckNorris.fact)
+  Photo.create(photo:  "https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg", user_id: User.all.sample.id, blurb: Faker::ChuckNorris.fact)
 end
 
 100.times do

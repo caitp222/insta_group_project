@@ -1,6 +1,16 @@
 require 'pry'
 class PhotosController < ApplicationController
 
+  def index
+    # @photos = []
+    # Photo.all.each do |photo|
+    #   @photos.push(photo.photo.url)
+    # end
+    @photos = Photo.order('created_at desc')
+    # @photo = Photo.last.photo.url
+    render json: @photos
+  end
+
   def show
     photo = Photo.find_by(id: params[:id])
     render json: photo

@@ -16,4 +16,8 @@ class Photo < ActiveRecord::Base
       self.photo = data
     end
   end
+
+  def photo_url
+    self.photo.url
+  end
 end
