@@ -10,21 +10,23 @@ class App extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    let that = this;
     const { newPhoto } = this.state;
     reader = new FileReader();
     file = $('input[type=file]')[0].files[0]
     reader.readAsDataURL(file)
     reader.onload = function(event) {
-      $('img')[0].src = reader.result
       $.ajax({
         url: '/photos',
         method: 'post',
         data: {base64: reader.result}
     }).done((response) => {
       console.log(response)
-      this.setState({photos: [response].concat(this.state.photos)})
-      this.setState({newPhoto: ""})
-      })
+      console.log(that)
+      that.setState({photos: [response].concat(that.state.photos)})
+      that.setState({newPhoto: ""})
+      console.log(that.state.photos)
+    })
     }
   }
 
@@ -34,7 +36,7 @@ class App extends React.Component {
       method: 'get'
     }).done((response) => {
       this.setState({photos: response});
-      console.log(response);
+      // console.log(response);
     });
   }
 
