@@ -2,12 +2,7 @@ require 'pry'
 class PhotosController < ApplicationController
 
   def index
-    # @photos = []
-    # Photo.all.each do |photo|
-    #   @photos.push(photo.photo.url)
-    # end
     @photos = Photo.order('created_at desc')
-    # @photo = Photo.last.photo.url
     render json: @photos
   end
 
@@ -22,6 +17,8 @@ class PhotosController < ApplicationController
     image_type = params[:base64].split(',')[0][5..-8]
     photo = Photo.new
     photo.set_image(image_type, encoded_string)
+    puts params.keys
+    photo.blurb = params[:blurb]
     photo.save
     render json: photo
   end
