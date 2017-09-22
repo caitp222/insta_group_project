@@ -11,6 +11,7 @@ class App extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     let that = this;
+    let blurb = $('textarea').val()
     const { newPhoto } = this.state;
     reader = new FileReader();
     file = $('input[type=file]')[0].files[0]
@@ -19,7 +20,7 @@ class App extends React.Component {
       $.ajax({
         url: '/photos',
         method: 'post',
-        data: {base64: reader.result}
+        data: {blurb: blurb, base64: reader.result}
     }).done((response) => {
       console.log(response)
       console.log(that)
