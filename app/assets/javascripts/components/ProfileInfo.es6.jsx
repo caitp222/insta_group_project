@@ -8,6 +8,7 @@ class ProfileInfo extends React.Component {
         <span className="profile">
           <img className="avatar" src={photoUrl} alt=""/>
             <div>
+              <h3>@RicoSuave</h3>
                 {bio}
               </div>
         </span>

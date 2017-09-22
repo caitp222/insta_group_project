@@ -27,6 +27,8 @@ class App extends React.Component {
       that.setState({photos: [response].concat(that.state.photos)})
       that.setState({newPhoto: ""})
       console.log(that.state.photos)
+      $('textarea').val("")
+      file.empty();
     })
     }
   }
@@ -43,8 +45,8 @@ class App extends React.Component {
 
   render() {
     const profileInfo = {
-      photoUrl: "https://vignette.wikia.nocookie.net/logopedia/images/a/a4/Google-Currents-Featured-300x300.png/revision/latest?cb=20120704191200",
-      bio: "Hello I am adam"
+      photoUrl: "https://avatars1.githubusercontent.com/u/25166893?v=4&s=400",
+      bio: "I'm Rico and I am Suave.. :) #Bro"
     }
     return(
       <div id="container">

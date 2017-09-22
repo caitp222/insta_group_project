@@ -5,7 +5,7 @@ class Photo < ActiveRecord::Base
   has_many :comments
   has_many :likes
 
-  has_attached_file :photo, :styles => {:medium => "300x300 >", :thumb => "100x100 >"}
+  has_attached_file :photo, :styles => {:medium => "600x600 >", :thumb => "100x100 >"}
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 
   def set_image(image_type, b64)
