@@ -8,6 +8,7 @@ class FollowDetails extends React.Component {
         <hr />
         <center><h4>Followers: {followers}  |  Following: {following}  |  Photos: {photoCount}</h4></center>
         <hr />
+        <br></br>
       </div>
     )
   }
