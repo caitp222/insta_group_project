@@ -1,6 +1,12 @@
 require 'pry'
 class PhotosController < ApplicationController
 
+  def index
+    @photos = Photo.all
+    # @photo = Photo.last.photo.url
+    render json: @photos
+  end
+
   def show
     photo = Photo.find_by(id: params[:id])
     render json: photo
