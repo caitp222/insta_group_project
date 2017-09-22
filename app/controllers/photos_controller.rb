@@ -7,9 +7,11 @@ class PhotosController < ApplicationController
   end
 
   def create
+    # binding.pry
     encoded_string = params[:base64].split(',')[1]
+    image_type = params[:base64].split(',')[0][5..-8]
     photo = Photo.new
-    photo.set_image(encoded_string)
+    photo.set_image(image_type, encoded_string)
     photo.save
     render json: photo
   end
