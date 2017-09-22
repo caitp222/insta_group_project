@@ -2,10 +2,11 @@ $(document).ready(function() {
   $('#new_photo').submit(function(e) {
     e.preventDefault();
     reader = new FileReader();
-    file = $('input[type=file]')[0].files[0]
+    file = $('input[type=file]')[1].files[0]
+    // debugger
     reader.readAsDataURL(file)
     reader.onload = function(event) {
-      $('img')[0].src = reader.result
+      $('img')[$('img').length -1].src = reader.result
       $.ajax({
         url: '/photos',
         method: 'post',

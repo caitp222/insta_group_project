@@ -4,7 +4,7 @@ class Photo extends React.Component {
     const photo = this.props.photo
     return(
       <div>
-        <img src={photo.photo.url} />
+        <img src={photo.photo_url} />
         <p>{blurb}</p>
       </div>
     )

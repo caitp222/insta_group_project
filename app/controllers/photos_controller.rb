@@ -2,6 +2,10 @@ require 'pry'
 class PhotosController < ApplicationController
 
   def index
+    # @photos = []
+    # Photo.all.each do |photo|
+    #   @photos.push(photo.photo.url)
+    # end
     @photos = Photo.all
     # @photo = Photo.last.photo.url
     render json: @photos
