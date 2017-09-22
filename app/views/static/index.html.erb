@@ -1,2 +1,13 @@
+<% if false %>
 <h1>Hello World</h1>
 <%= react_component('App') %>
+<% end %>
+
+<%= form_for @photo do |f| %>
+ <%= f.file_field :photo %>
+ <%= f.submit "Post" %>
+<% end %>
+
+
+
+<%= image_tag @new_photo.photo.url(:medium)%>

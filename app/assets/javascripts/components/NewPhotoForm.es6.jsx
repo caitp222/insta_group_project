@@ -3,9 +3,10 @@ class NewPhotoForm extends React.Component {
     return(
       <section id="new-photo-form">
         <p id="new-photo-form">Post a Photo</p>
-        <form>
-          <input type="text" name="photo-url" placeholder="Url to photo" /><br />
-          <textarea name="blurb" placeholder="What's your blurb?"></textarea><br />
+        <form method= "post" action="/photos" >
+          <input type="file" name="photo[photo]" /><br />
+          <input type="hidden" name="photo[user_id]" value="1" /><br />
+          <textarea name="photo[blurb]" value="blup"></textarea><br />
           <input type="submit" value="Post" />
         </form>
       </section>
