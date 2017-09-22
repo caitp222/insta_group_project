@@ -3,7 +3,6 @@ $(document).ready(function() {
     e.preventDefault();
     reader = new FileReader();
     file = $('input[type=file]')[1].files[0]
-    // debugger
     reader.readAsDataURL(file)
     reader.onload = function(event) {
       $('img')[$('img').length -1].src = reader.result
