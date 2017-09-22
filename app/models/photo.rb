@@ -10,7 +10,6 @@ class Photo < ActiveRecord::Base
 
   def set_image(b64)
     StringIO.open(Base64.decode64(b64)) do |data|
-      # binding.pry
       data.class.class_eval { attr_accessor :original_filename, :content_type }
       data.original_filename = 'file.jpeg'
       data.content_type = 'image/jpeg'
