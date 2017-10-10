@@ -1,26 +1,5 @@
-# README
+# Instagram Clone Group Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# insta_group_project
-# insta_group_project
+## Directions 
+* Clone the repository
+* Make sure ImageMagick is installed by running `brew install imagemagick`
