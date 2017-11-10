@@ -10,7 +10,7 @@
 ## Description
 The app simulates an Instagram account for a Mr. Rico Suave.
 
-The project was created as part of a two-day group exercise during Phase 3 of Dev Bootcamp. It is a Rails app that uses the React-Rails gem to incorporate a React front-end. It also uses the Paperclip gem to upload and save image files, and React and plain Javascript to display the uploaded image directly to the screen.
+The project was created as part of a two-day group exercise during Phase 3 of Dev Bootcamp. It is a Rails app that uses the React-Rails gem to incorporate a React front-end. It also uses the Paperclip gem to upload and save image files, and React and Javascript to display the uploaded image directly to the screen.
 
 ## Contributors
 * Caitlin Prentke
